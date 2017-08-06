@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="rootPane" prefHeight="145.0" prefWidth="437.0" stylesheets="@../styles/Styles.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.shutdownapp.FXMLController">
+   <children>
+      <VBox prefHeight="200.0" prefWidth="437.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <AnchorPane prefHeight="15.0" prefWidth="437.0">
+               <children>
+                  <Label id="dragBar" fx:id="dragBar" alignment="CENTER" layoutY="-1.0" onMouseDragged="#widgetDragged" onMousePressed="#getLocationOfWidget" prefHeight="26.0" prefWidth="450.0" text="Utilities">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label id="closeBtn" fx:id="closeBtn" alignment="CENTER" layoutX="421.0" onMouseClicked="#closeWidget" prefHeight="26.0" prefWidth="28.0" text="X" textFill="#fffefe">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <HBox alignment="CENTER" prefHeight="110.0" prefWidth="437.0">
+               <children>
+                  <Label fx:id="shutDownBtn" alignment="CENTER" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#shutDown" prefHeight="100.0" prefWidth="100.0" styleClass="Button">
+                     <graphic>
+                        <FontAwesomeIconView glyphName="POWER_OFF" size="40" styleClass="Icon" />
+                     </graphic>
+                     <effect>
+                        <DropShadow radius="13.7075" spread="0.21" width="35.83" />
+                     </effect>
+                     <HBox.margin>
+                        <Insets right="10.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label fx:id="restartBtn" alignment="CENTER" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#restart" prefHeight="100.0" prefWidth="100.0" styleClass="Button">
+                     <graphic>
+                        <FontAwesomeIconView glyphName="REPEAT" size="40" styleClass="Icon" />
+                     </graphic>
+                     <effect>
+                        <DropShadow radius="13.7075" spread="0.21" width="35.83" />
+                     </effect>
+                     <HBox.margin>
+                        <Insets right="10.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label fx:id="logOut" alignment="CENTER" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#logOut" prefHeight="100.0" prefWidth="100.0" styleClass="Button">
+                     <graphic>
+                        <FontAwesomeIconView glyphName="SIGN_OUT" size="40" styleClass="Icon" />
+                     </graphic>
+                     <effect>
+                        <DropShadow radius="13.7075" spread="0.21" width="35.83" />
+                     </effect>
+                     <HBox.margin>
+                        <Insets right="10.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label fx:id="settingsBtn" alignment="CENTER" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#setPrameters" prefHeight="100.0" prefWidth="100.0" styleClass="Button">
+                     <graphic>
+                        <FontAwesomeIconView glyphName="GEAR" size="40" styleClass="Icon" />
+                     </graphic>
+                     <effect>
+                        <DropShadow radius="13.7075" spread="0.21" width="35.83" />
+                     </effect>
+                  </Label>
+               </children>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

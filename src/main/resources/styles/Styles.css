@@ -1,0 +1,31 @@
+.Button {
+  
+    -fx-background-color: black;
+    -fx-background-radius: 200px;
+    
+    -fx-border-radius:200px;
+   -fx-margin-right:10px;
+   -fx-effect: dropshadow(three-pass-box, rgba(0,25,0,0.8), 10, 0, 0, 0);
+   
+}
+.Button:hover{
+   
+    -fx-background-color:#1caec1;
+    -fx-cursor:hand;
+    
+}
+.Icon {
+     -fx-fill:white;
+}
+#AnchorPane{
+    -fx-background-color:#00cccc;
+}
+#dragBar{
+    -fx-background-color: black;
+}
+#closeBtn:hover{
+    
+    -fx-text-fill: #1caec1;
+     -fx-cursor:hand;
+    
+}
